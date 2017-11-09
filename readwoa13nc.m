@@ -1,14 +1,5 @@
-% Download the netcdf format dataset from woa13
-% readwoa13nc.m
-% Author: Syed Faizanul Haque
-% Nov/5/2017
-% This function downloads the 1 degree objectively analyzed dataset
-% for the different variables from the World Ocean Atlas 2013 v2 database.
-% It reads in the netcdf file and outputs a matrix
-%For more information please read the readwoa13ncReadMe file at
-%https://github.com/UCI-OCEANOGRAPHY/matlab-tools
-
 function [M] = readwoa13nc(n, type)
+% M = readwoa13nc(n,type)
 % Input:
 %    type: 
 %    type = 1      temperature
@@ -20,7 +11,7 @@ function [M] = readwoa13nc(n, type)
 %    type = 7      Density
 %    type = 8      Conductivity
 %    type = 9      Percent Oxygen Saturation
-%    type = 10      Apparent Oxygen Utilization
+%    type = 10     Apparent Oxygen Utilization
 %
 %    n:
 %    n = 0     annual average
@@ -33,7 +24,21 @@ function [M] = readwoa13nc(n, type)
 %   Depending on the n value and type M is either a 180 x 360 x 102 array or a 
 %   180 x 360 x 57 array
 %
-%ncdisp(fname, 't_an')
+% Example 
+%     M = readwoa13nc(0,1);
+%     contourf(M(:,:,1)); 
+%     title('SST annual average (deg C)')
+% Download the netcdf format dataset from woa13
+% readwoa13nc.m
+% Author: Syed Faizanul Haque
+% Nov/5/2017
+% This function downloads the 1 degree objectively analyzed dataset
+% for the different variables from the World Ocean Atlas 2013 v2 database.
+% It reads in the netcdf file and outputs a matrix
+%For more information please read the readwoa13ncReadMe file at
+%https://github.com/UCI-OCEANOGRAPHY/matlab-tools
+%
+%See also ncdisp, ncread
 
 if (type == 1)
     %Temperature
