@@ -1,2 +1,2 @@
 # matlab-tools
-matlab utilties
+matlab utilities
