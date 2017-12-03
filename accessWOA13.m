@@ -2,7 +2,7 @@ function [M, X, Y, Z] = accessWOA13(vv,tt,ff,gg)
 
 %Download data from World Ocean Atlas (WOA) 2013 v2,
 %and save the matrices
-%Authors, Benoit Pasquir, Syed Faizanul Haque, Francois Primeau
+%Authors: Benoit Pasquir, Syed Faizanul Haque, Francois Primeau
 %accessWOA13.m
 
 % The function will prompt the user about downloading the file or not:
@@ -39,9 +39,9 @@ function [M, X, Y, Z] = accessWOA13(vv,tt,ff,gg)
 %     ?        'ma'   for Season/month minus annual mean
 %     ?        'gp'   for Grid points
 %     ??? gg = grid resolution (string, optional - default '01'). Possible choices:
-%              '04'   for 0.25°x025°
-%              '01'   for 1°x1°
-%              '5d'   for 5°x5°
+%              '04'   for 0.25Â°x025Â°
+%              '01'   for 1Â°x1Â°
+%              '5d'   for 5Â°x5Â°
 
 % For citation of WOA13 Data, see:
 %   https://www.nodc.noaa.gov/OC5/woa13/pubwoa13.html
