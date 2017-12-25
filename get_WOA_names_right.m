@@ -130,8 +130,10 @@ end
 my.file_name = sprintf([my.field_type '_' my.var_name '_%02d_' my.res '.mat'],tt) ;
 
 nc_file.name = sprintf(['woa13_' nc_file.deca_name '_' vv '%02d_' gg '.nc'],tt) ;
-% odd v2 added at the end for temperature
-if strcmp(vv,'t') nc_file.name = [nc_file.name(1:end-3) 'v2' nc_file.name(end-2:end)] ; end ;
+% odd v2 added at the end for temperature and salinity
+if strcmp(vv,'t') || strcmp(vv,'s')
+  nc_file.name = [nc_file.name(1:end-3) 'v2' nc_file.name(end-2:end)] ; 
+end
 
 nc_file.url.OPeNDAP = ['https://data.nodc.noaa.gov/thredds/dodsC/woa/WOA13/DATAv2/' ...
                nc_file.var_name '/netcdf/' nc_file.deca_name '/' nc_file.res '/' nc_file.name] ;
